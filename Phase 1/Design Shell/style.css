@@ -1,0 +1,9 @@
+/* Tags for the classes of header footer and main*/
+.footer{color: blue; font-size: 30px; border: 5px solid  red; padding: 10px; background-color: tomato; text-align: center;}
+.main{color: green; font-size: 30px; border: 5px solid  purple; padding: 10px; background-color: cyan; text-align: center;}
+.header{color: pink; font-size: 30px; border: 5px solid  yellow; padding: 10px; background-color: lightgreen; text-align: center;}
+
+/* Generic tags */
+div{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: x-large; color: lime; text-align: center;}
+p{font-family: Georgia, 'Times New Roman', Times, serif; font-size: small; color: mediumaquamarine; text-align: center;}
+h1,h2,h3,h4,h5,h6{font-family: 'Courier New', Courier, monospace; font-size: medium; color: saddlebrown; text-align: center;}
