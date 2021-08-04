@@ -1,0 +1,7 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%201/Design%20Shell
+
+This project contains two files, a test html and the external css file.
+The external css file "style.css" contains six lines of codes to modify certain tags and classes.
+The file modifies the header, footer and main class.
+Additionally it modifies the generic header tags(h1 - h6), all div tags and all p tags.
+The included htlm file "test.html" test all six of these different classes and tags.
