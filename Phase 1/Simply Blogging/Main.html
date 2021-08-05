@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="Blog.js"></script>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .topbuffer{ margin-top:20px;}
+    </style>
+</head>
+<div style="background-color: deepskyblue; height:60px; width:100%; padding: 10px;">
+    <h2>Simply Blogging <span style = "margin-left: 450px;">
+        <a href="">Home</a>&nbsp;
+        <a href="">Contact</a>&nbsp;
+        <a href="">About Us</a>
+    </span></h2>
+
+</div>
+<br>
+<body class = "container bg-dark text-white">
+    <div class= "col d-flex justify-content-center">
+        <div class ="card bg-primary text-white" style = "width: 500px">
+            <div class = "card-body">
+                <h3 class = "card-title text-center">Make a Post</h3>
+                <form class = "form-group">
+                    <label class = "label-primary" style = "font-size: x-large;">Title</label>
+                    <input class = "form-control" type="text" id="Title" placeholder="Enter a title" required/><br/>
+                    <label class = "label-primary" style = "font-size: x-large;">Article</label>
+                    <textarea class = "form-control"  rows = "4" cols="50" id="Article" placeholder="Enter text for the article" required></textarea><br/>
+                    <label class = "label-primary" style = "font-size: x-large;">Add Image</label>
+                    <input class = "form-control"  type="text" id="Image" placeholder="Enter a url"/><br/>
+                    <button class = "btn btn-success" type="button" onclick="addblog()">Add</button>&nbsp;
+                    <input class = "btn btn-secondary" type="reset" value="Clear"></input>&nbsp;
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class = "row" id = "Blog">
+            
+    </div>
+</body>
+</html>

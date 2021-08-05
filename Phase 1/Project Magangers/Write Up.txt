@@ -1,0 +1,9 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%201/Project%20Magangers
+
+2058513_richard_mean_stack/Phase 1/Project Magangers/
+
+This project contains 4 files, 3 html files and one js file.
+Main.html is the main page which will direct to the other pages.
+Project Manager.html is the form to add the data to the storage.
+Finance Team.html is the page that will display the data in the table.
+Manager.js is the javascript files with all the funtions for Project Manager.html and Finance Team.html.
