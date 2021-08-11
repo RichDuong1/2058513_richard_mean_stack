@@ -1,0 +1,41 @@
+table, th, td{
+    border: 2px solid black;
+    width: 80%;
+    padding: 10px;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.text {
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form {
+    padding: 10px;
+    border-style: solid;
+    border: cornflowerblue;
+    font-size: larger;
+    text-align: center;
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background-color: darkgrey;
+    color: white;
+    font-size: x-large;
+}
+
+.centercards {
+    margin: auto;
+    padding: 10px;
+}

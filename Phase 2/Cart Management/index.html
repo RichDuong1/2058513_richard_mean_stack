@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="myscripts.js"></script>
+</head>
+<div class = "header">
+    <h1>Shopping Cart</h1>
+</div>
+<body onload = "storedisplay()">
+    <div class = "form">
+        <p>Cart size: <span id = "cartsize"></span></p>
+        <form action = "checkout.html">
+            <input type = "submit" value = "Checkout" onclick = "cart.store()"/>
+        </form>
+    </div>
+    <div class = "centercards">
+        <div class = "card-columns">
+            <div class = "card bg-primary text-white text-center">
+                <div class = "card-body">
+                    Name: <span id = "name1"></span><br>
+                    Price: <span id = "price1"></span><br>
+                    <button class = "btn btn-success" type="button" onclick="cart.additem(item1.getid())">Add</button>&nbsp;
+                </div>
+            </div>
+            <div class = "card bg-primary text-white text-center">
+                <div class = "card-body">
+                    Name: <span id = "name2"></span><br>
+                    Price: <span id = "price2"></span><br>
+                    <button class = "btn btn-success" type="button" onclick="cart.additem(item2.getid())">Add</button>&nbsp;
+                </div>
+            </div>
+            <div class = "card bg-primary text-white text-center">
+                <div class = "card-body">
+                    Name: <span id = "name3"></span><br>
+                    Price: <span id = "price3"></span><br>
+                    <button class = "btn btn-success" type="button" onclick="cart.additem(item3.getid())">Add</button>&nbsp;
+                </div>
+            </div>
+            <div class = "card bg-primary text-white text-center">
+                <div class = "card-body">
+                    Name: <span id = "name4"></span><br>
+                    Price: <span id = "price4"></span><br>
+                    <button class = "btn btn-success" type="button" onclick="cart.additem(item4.getid())">Add</button>&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</body>    
+</html>
