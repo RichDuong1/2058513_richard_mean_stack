@@ -1,0 +1,64 @@
+<div *ngIf="show1" class = "container">
+  <h2>Login Form</h2>
+  <form [formGroup]="loginRef" (ngSubmit)="verify()" class = "form-group">
+    <label>Username</label>
+    <input type="text" formControlName="username" class = "form-control"/><br>
+    <label>Password</label>
+    <input type="password" formControlName="password" class = "form-control"/><br>
+    <input type="submit" value="Login" class = "btn btn-success"/>
+  </form>
+  <br>
+  <div>
+    <input type="button" value="Sign Up" (click)="showsignup()" class = "btn btn-primary"/>
+  </div>
+  <br>
+  <div id = "loginfail" class = "container" style = "color: red;">
+
+  </div>
+</div>
+<div *ngIf="show2" class = "container">
+  <h2>Sign Up</h2>
+  <div>
+    <input type="button" value="Login" (click)="showlogin()" class = "btn btn-primary"/>
+  </div>
+  <form [formGroup]="signRef" (ngSubmit)="register()" class = "form-group">
+    <label>First Name</label>
+    <input type="text" formControlName="fname" class = "form-control"/><br>
+    <label>Last Name</label>
+    <input type="text" formControlName="lname" class = "form-control"/><br>
+    <label>Username</label>
+    <input type="text" formControlName="signuser" class = "form-control"/><br>
+    <label>Password</label>
+    <input type="password" formControlName="signpass" class = "form-control" /><br>
+    <input type="submit" value="Register" class = "btn btn-success"/>
+    <input type="reset" value="Reset" class = "btn btn-info"/>
+  </form>
+  <br>
+  <div id = 'regsuccess' class = "container" style = "color: chartreuse;">
+
+  </div>
+</div>
+<div *ngIf="show3" class = "container">
+  <h2>Portfoilio</h2>
+  <h3>Welcome {{welcome}}</h3>
+  <form [formGroup]="portRef" (ngSubmit)="save()" class = "form-group">
+    <label>Contact Name</label>
+    <input type="text" formControlName="contact" class = "form-control"/><br>
+    <label>Phone Number</label>
+    <input type="text" formControlName="number" class = "form-control"/><br>
+    <input type="submit" value="Save" class = "btn btn-success"/>
+  </form>
+  <div class = "container">
+    <table id = "table" class = "table table-dark table-bordered table-hover">
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Phone No.
+        </th>
+      </tr>
+    </table>
+
+  </div>
+</div>
