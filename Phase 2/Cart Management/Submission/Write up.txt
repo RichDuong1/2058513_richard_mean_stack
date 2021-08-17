@@ -1,0 +1,11 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%202/Cart%20Management
+
+2058513_richard_mean_stack/Phase 2/Cart Management/
+
+This project consisted of five files not including the tsconfig.json.
+There are two html files. 
+index.html serves as the main page for the project.
+checkout.html shows the price and all the items that are in the cart.
+myscripts.ts is the typescript file with all of the logic.
+myscripts.js is a product of compiling the typescript file.
+styles.css is uses to stylize the pages.
