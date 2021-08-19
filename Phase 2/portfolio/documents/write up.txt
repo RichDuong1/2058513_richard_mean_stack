@@ -1,0 +1,8 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%202/portfolio/src/app
+2058513_richard_mean_stack/Phase 2/portfolio/src/app/
+
+This project contains 4 main files.
+The first file is app.component.html which has all the code for displaying and in index.html, a link to bootstrap 4 was added.
+The second file was app.component.ts which holds all the logic and forms for the website.
+The third file is register.ts which is a file for the class that hold login information.
+The final file is app.module.ts which holds all the imports.

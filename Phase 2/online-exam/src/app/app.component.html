@@ -1,0 +1,43 @@
+<div>
+  <div class="split left">
+    <h1>Online Quiz</h1>
+    <div class="center">
+      <form #formRef="ngForm" (ngSubmit)="checkanswers(formRef)">
+        <div *ngFor="let q of questionarray">
+          <p>{{q.text}}</p>
+          <mat-radio-group name={{q.id}} ngModel>
+           A <mat-radio-button value='1'>{{q.a1}}</mat-radio-button><br>
+           B <mat-radio-button value='2'>{{q.a2}}</mat-radio-button><br>
+           C <mat-radio-button value='3'>{{q.a3}}</mat-radio-button><br>
+           D <mat-radio-button value='4'>{{q.a4}}</mat-radio-button><br>
+          </mat-radio-group>
+          <br>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </form>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="split right" *ngIf="flag">
+    <div class="center">
+      <div *ngFor="let q of questionarray">
+        <h2>Question {{q.id}}</h2>
+        <span *ngIf="q.answer == 1 && output[q.id] == 1">&nbsp; You answered correctly</span>
+        <span *ngIf="q.answer == 1 && output[q.id] != 1">&nbsp; Correct answer is A</span>
+        <span *ngIf="q.answer != 1 && output[q.id] == 1">&nbsp; Your answer was A</span>
+        <br>
+        <span *ngIf="q.answer == 2 && output[q.id] == 2">&nbsp; You answered correctly</span>
+        <span *ngIf="q.answer == 2 && output[q.id] != 2">&nbsp; Correct answer is B</span>
+        <span *ngIf="q.answer != 2 && output[q.id] == 2">&nbsp; Your answer was B</span>
+        <br>
+        <span *ngIf="q.answer == 3 && output[q.id] == 3">&nbsp; You answered correctly</span>
+        <span *ngIf="q.answer == 3 && output[q.id] != 3">&nbsp; Correct answer is C</span>
+        <span *ngIf="q.answer != 3 && output[q.id] == 3">&nbsp; Your answer was C</span>
+        <br>
+        <span *ngIf="q.answer == 4 && output[q.id] == 4">&nbsp; You answered correctly</span>
+        <span *ngIf="q.answer == 4 && output[q.id] != 4">&nbsp; Correct answer is D</span>
+        <span *ngIf="q.answer != 4 && output[q.id] == 4">&nbsp; Your answer was D</span>
+      </div>
+    </div>
+  </div>
+</div>

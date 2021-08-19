@@ -1,0 +1,9 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%202/task-tracker/src/app
+2058513_richard_mean_stack/Phase 2/task-tracker/src/app/
+
+This project contains 5 main files.
+app.component.html is the main page of the website and has all the forms and the tables.
+app.component.ts holds all the logic for taking in the forms and adding content to the table.
+app.component.css contains some styles to help make the page look nicer.
+taskdata.ts is the class file to hold the output of the form.
+app.module.ts applies all the imports that are needed to use the angular materials.
