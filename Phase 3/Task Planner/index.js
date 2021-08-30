@@ -62,10 +62,10 @@ let footer =`
 let tabletop = `
 <table style="border: 1px solid black;">
     <tr>    
-        <th>Emp ID</th>
-        <th>Task ID</th>
-        <th>Task</th>
-        <th>Deadline</th>
+        <th style="border: 1px solid black;">Emp ID</th>
+        <th style="border: 1px solid black;">Task ID</th>
+        <th style="border: 1px solid black;">Task</th>
+        <th style="border: 1px solid black;">Deadline</th>
     </tr>
 `
 
@@ -127,7 +127,7 @@ let server = http.createServer((request, response) => {
             response.write(footer);
             response.write(tabletop);
             for (let i of taskarray){
-                response.write(`<tr><td>`+i.empid+`</td><td>`+i.taskid+`</td><td>`+i.task+`</td><td>`+i.deadline+`</td></tr>`);
+                response.write(`<tr><td style="border: 1px solid black;">`+i.empid+`</td><td style="border: 1px solid black;">`+i.taskid+`</td><td style="border: 1px solid black;">`+i.task+`</td><td style="border: 1px solid black;">`+i.deadline+`</td></tr>`);
             }
             response.write(tablebottom);
         }
