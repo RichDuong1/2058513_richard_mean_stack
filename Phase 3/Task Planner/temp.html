@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <h2>Task Planner</h2>
+</head>
+<body>
+    <div>
+        <h2>
+            Add Task
+        </h2>
+        <form action = "addtask">
+            <lable>Emp ID</lable>
+            <input type ="text" name = "empid"></br>
+            <lable>Task ID</lable>
+            <input type ="text" name = "taskid"></br>
+            <lable>Task</lable>
+            <input type ="text" name = "task"></br>
+            <lable>Deadline</lable>
+            <input type = "date" name = "deadline"></br>
+            <input type="submit" value = "Add task">
+        </form>
+    </div>
+    <div>
+        <h2>Delete Task</h2>
+        <form action = "deletetask">
+            <lable>Task Id</lable>
+            <input type ="text" name = "deleteid"></br>
+            <input type ="submit" value = "Delete Task">
+        </form>
+    </div>
+    <div>
+        <h2>List Tasks</h2>
+        <form action = "listtask">
+            <input type = "submit" value = "List all Tasks">
+        </form>
+    </div>
+    <table style="border: 1px solid black;"></table>
+</body>    
+</html>

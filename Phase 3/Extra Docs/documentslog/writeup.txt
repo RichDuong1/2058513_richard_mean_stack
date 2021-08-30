@@ -1,0 +1,5 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%203/Log%20Records
+2058513_richard_mean_stack/Phase 3/Log Records/
+
+There is one main file called main.js which has all the logic for taking input from the keyboard and add it to data.json.
+pakage.json holds the dependencies that main.js requires.
