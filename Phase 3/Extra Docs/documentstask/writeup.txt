@@ -1,0 +1,6 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%203/Task%20Planner
+2058513_richard_mean_stack/Phase 3/Task Planner/
+
+There are two important files for this project.
+The first is index.js which is the file containing the forms for adding task, deleting task, and listing the tasks.
+task.json is the json file that holds all the task information and is updated based on actions done in index.js.
