@@ -1,0 +1,8 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%203/Socket%20Chat
+2058513_richard_mean_stack/Phase 3/Socket Chat/
+
+This project has two main files app.js and index.html.
+index.html contains the forms for entering the text and sending them to sever.
+app.js is the code for setting up the server and sending a response back to the client.
+There are two supplemental json files.
+Package.json lists all the required modules needed to run the program.
