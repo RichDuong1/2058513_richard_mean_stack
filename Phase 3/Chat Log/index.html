@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>MongoDB with Website</h2>
+    <h3>Insert</h3>
+    <form id = "form">
+        <label>Course ID:</label>
+        <input type="text" id = "courseid">
+        <br>
+        <label>Course Name:</label>
+        <input type="text" id = "coursename">
+        <br>
+        <label>Description</label>
+        <textarea id = "description"></textarea>
+        <br>
+        <label>Amount:</label>
+        <input type="text" id = "amount">
+        <br>
+        <input type="submit" value="Add">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+        var socket = io();
+        var form = document.getElementById("form");
+        var courseid = document.getElementById("courseid");
+        var coursename = document.getElementById("coursename");
+        var description = document.getElementById("description");
+        var amount = document.getElementById("amount");
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            if(courseid.value && coursename.value && description.value && amount.value){
+                var info = [courseid.value,coursename.value,description.value,amount.value];
+                socket.emit("data", info);
+            }
+        })
+    </script>
+</body>    
+</html>
