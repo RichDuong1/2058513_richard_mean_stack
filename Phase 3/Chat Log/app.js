@@ -5,6 +5,14 @@ let app = express();
 let http = require("http").Server(app);
 let io = require("socket.io")(http);
 
+let schema = mongoose.Schema({
+    _id:Number,
+    name:String,
+    message:String,
+});
+
+let output = ["Hello","How are you?","How was your day?","Do you like pizza?","That sounds fun.","Yes","No","Maybe","Bye"]
+
 mongoose.pluralize(null);
 
 app.get("/",(req,res) => {
@@ -15,8 +23,10 @@ app.get("/",(req,res) => {
 io.on("connection", (socket)=>{
     console.log("Client connected");
 
-    socket.on("data", (msg)=>{
+    socket.on("text", (msg)=>{
         console.log(msg);
+        let rand = Math.floor(Math.random()*output.length);
+        socket.emit("res",output[rand]);
 
         //mongoose implementation
         mongoose.connect(url).
@@ -25,18 +35,17 @@ io.on("connection", (socket)=>{
 
         let db = mongoose.connection;
         db.once("open",()=> {
-            let schema = mongoose.Schema({
-                _id:Number,
-                name:String,
-                description:String,
-                amount:Number
-            });
 
-            let model = mongoose.model("Course",schema);
+            let model = mongoose.model("ChatLog",schema);
 
-            model.find({_id:msg[0]},(err,doc)=>{
-                if(err){
-                    let modelinsert = new model({_id:msg[0],name:msg[1],description:msg[2],amount:msg[3]});
+            model.find({},(err,doc)=>{
+                if(!err){
+                    let length = 1;
+                    doc.forEach(rec =>{
+                        length++;
+                    })
+
+                    let modelinsert = new model({_id:length,name:msg[0],message:msg[1]});
 
                     model.insertMany([modelinsert],(err,result)=>{
                         if(!err){
@@ -49,7 +58,7 @@ io.on("connection", (socket)=>{
                     })
                 }
                 else{
-                    console.log("ID exists");
+                    console.log(err);
                 }
             })
         })

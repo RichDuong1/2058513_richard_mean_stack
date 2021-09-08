@@ -4,39 +4,55 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <h2>MongoDB with Website</h2>
-    <h3>Insert</h3>
-    <form id = "form">
-        <label>Course ID:</label>
-        <input type="text" id = "courseid">
-        <br>
-        <label>Course Name:</label>
-        <input type="text" id = "coursename">
-        <br>
-        <label>Description</label>
-        <textarea id = "description"></textarea>
-        <br>
-        <label>Amount:</label>
-        <input type="text" id = "amount">
-        <br>
-        <input type="submit" value="Add">
-        <input type="reset" value="Reset">
+    <h2>Chat Log</h2>
+    <h3>Messages</h3>
+    <div id = "header"></div>
+    <br>
+    <label>Name</label>
+    <input type="text" id = "name">
+    <br>
+    <ul id = "message" style="border: 1px solid black; height: 400px; width: 50%; padding-left: 20px; list-style-type:none; padding-top: 10px; margin-left: 10px;">
+
+    </ul>
+    <br>
+    <form id = "form" action="">
+        <textarea id = "input" style="height: 100px; width: 50%; padding-left: 20px; padding-top: 10px; margin-left: 10px;"></textarea>
+        <input type="submit" value="Send">
     </form>
 
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/JavaScript">
         var socket = io();
+        var message = document.getElementById("message");
         var form = document.getElementById("form");
-        var courseid = document.getElementById("courseid");
-        var coursename = document.getElementById("coursename");
-        var description = document.getElementById("description");
-        var amount = document.getElementById("amount");
+        var input = document.getElementById("input");
+        var username = document.getElementById("name");
+        var header = document.getElementById("header");
+        var headercontent = document.createElement("p");
         form.addEventListener("submit", function(e){
             e.preventDefault();
-            if(courseid.value && coursename.value && description.value && amount.value){
-                var info = [courseid.value,coursename.value,description.value,amount.value];
-                socket.emit("data", info);
+            if(input.value){
+                if(username.value == ''){
+                    username.value = "Client";
+                }
+                var line = document.createElement('li');
+                var date = new Date();
+                var time = date.toString().slice(15,24);
+                line.textContent = time + " " +username.value + ": "+input.value;
+                message.appendChild(line);
+                headercontent.textContent = "Hello "+username.value;
+                header.appendChild(headercontent);
+                var data = [username.value, input.value]
+                socket.emit("text", data);
+                input.value='';
             }
+        })
+        socket.on("res",(msg)=>{
+            var line = document.createElement('li');
+            var date = new Date();
+            var time = date.toString().slice(15,24);
+            line.textContent = time +" Server: "+msg;
+            message.appendChild(line);
         })
     </script>
 </body>    

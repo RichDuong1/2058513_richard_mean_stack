@@ -1,0 +1,6 @@
+https://github.com/RikcNixon/2058513_richard_mean_stack/tree/master/Phase%203/Mongodb%20website
+2058513_richard_mean_stack/Phase 3/Mongodb website/
+
+This project consisted of one javascript file and multiple html files.
+app.js connects to the mongodb database and holds all the logic for taking in the forms, modifying the database and displaying the table.
+index.html is the main page file and all the other html files modify the database with respect to their name.
